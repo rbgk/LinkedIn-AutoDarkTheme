@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Auto Dark Theme",
+    "description": "Modifies cookie value on site load to automatically enable dark theme if not already",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "linkedin.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.linkedin.com/*"
+            ],
+            "js": [
+                "script.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
